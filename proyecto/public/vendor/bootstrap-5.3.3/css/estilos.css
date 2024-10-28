@@ -1,0 +1,496 @@
+h1 {
+    color: rgb(31, 33, 138)
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #ebf4f5;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.head {
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+header {
+    height: 40vh;
+    background-image: linear-gradient(to top, rgba(116, 143, 230, 0.5) 0%, rgba(116, 143, 230, 0.5) 100%);
+    background-repeat: no-repeat;
+    background-size: cover; /* Mejor para ajustar la imagen */
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translateX(110%); /* Cambiado para que el menú sea desplazado horizontalmente */
+    box-shadow: 0 0 6px rgba(7, 25, 185, 0.5);
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu-navegacion.active {
+    transform: translateX(0); /* Muestra el menú cuando se activa */
+}
+
+.spread {
+    transform: translate(0);
+}
+
+.menu-navegacion a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy {
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(31, 33, 138)
+}
+
+/* Servicios */
+
+.subtitulo {
+    text-align: center;
+    font-weight: 300;
+    color: rgb(31, 33, 138)
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-servicio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img {
+    width: 40%;
+    transition: filter 0.3s ease;
+    /* Transición suave para el brillo */
+}
+
+.contenedor-servicio img:hover {
+    filter: brightness(1.3);
+    /* Incrementar el brillo al pasar el mouse */
+}
+
+.checklist-servicio {
+    display: inline-block;
+}
+
+.service {
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.service img {
+    width: 400px;
+    height: 200px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.n.service {
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.number {
+    display: inline-block;
+    background-image: linear-gradient(to top, #2688f8 0%, #428ef3 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+/* Excursiones */
+.excursiones {
+    background: #f2f3eb;
+    min-height: 100vh;
+}
+
+/* Estilo para las imágenes */
+.excursiones img {
+    width: 100%;  /* Establece un ancho fijo */
+    height: 300px; /* Establece una altura fija */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    display: block; /* Hace que el margen automático funcione */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Efecto hover */
+.excursiones img:hover {
+    filter: brightness(1.3);
+    /* Incrementar el brillo al pasar el mouse */
+}
+
+/* Estilo para las columnas */
+.excursiones .col {
+    margin-bottom: 20px; /* Espacio inferior entre las columnas en pantallas pequeñas */
+    padding: 0 15px; /* Espacio lateral para mantener el espaciado en pantallas grandes */
+}
+
+/* Para asegurar más espacio en pantallas grandes */
+@media (min-width: 768px) {
+    .excursiones .col {
+        margin-bottom: 0; /* Elimina el margen inferior en pantallas grandes */
+        padding: 0 30px; /* Aumenta el espaciado lateral */
+    }
+}
+
+/* Paquetes */
+.paquetes {
+    background-image: linear-gradient(to top, rgba(116, 143, 230, 0.5) 0%, rgba(116, 143, 230, 0.5) 100%);
+    min-height: 80vh;
+}
+
+/* Efecto hover */
+.paquetes img:hover {
+    filter: brightness(1.3);
+    /* Incrementar el brillo al pasar el mouse */
+}
+
+.paquetes img {
+    width: 100%;  /* Establece un ancho fijo */
+    height: 300px; /* Establece una altura fija */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    display: block; /* Hace que el margen automático funcione */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Para asegurar más espacio en pantallas grandes */
+@media (min-width: 768px) {
+    .paquetes .col {
+        margin-bottom: 0; /* Elimina el margen inferior en pantallas grandes */
+        padding: 0 30px; /* Aumenta el espaciado lateral */
+    }
+}
+
+/* Reducir el tamaño total del carrusel */
+#galeriaCarrusel {
+    max-width: 600px; /* Establece el ancho máximo del carrusel */
+    max-height: 300px; /* Establece la altura máxima del carrusel */
+    margin: 0 auto;    /* Centra el carrusel en la página */
+}
+
+/* Asegurar que las imágenes se adapten al nuevo tamaño */
+.carousel-item img {
+    width: 100%;         /* Asegura que las imágenes ocupen el ancho total del carrusel */
+    height: 300px;       /* Ajustar la altura a 300px para mantener proporción */
+    object-fit: cover;   /* Asegura que las imágenes se recorten si es necesario */
+    object-position: center; /* Centra la imagen en su contenedor */
+}
+/* Efecto hover */
+.carousel-item img:hover {
+    filter: brightness(1.3);
+    /* Incrementar el brillo al pasar el mouse */
+}
+
+.cont-location img {
+    width: 400px;
+    height: 200px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 20px;
+    transition: filter 0.3s ease;
+    /* Transición suave para el brillo */
+}
+
+.cont-location img:hover {
+    filter: brightness(1.3);
+    /* Incrementar el brillo al pasar el mouse */
+}
+
+.cont-location {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.registro {
+    min-height: 100vh;
+    background: #b7e68c;
+}
+
+.registro h2 {
+    margin-top: 10px;
+    /* Espacio entre la línea y el texto */
+}
+
+.registro button {
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.contenedor-registro {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Contacto */
+.contacto {
+    background-color: #c2bebe; /* Fondo suave */
+    min-height: 100vh;
+    padding: 40px 0; /* Espaciado superior e inferior */
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px 40px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.input-wrapper img.input-icon {
+    position: absolute;
+    left: 10px; /* Ajusta según necesites */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 20px; /* Ajusta el tamaño aquí */
+    height: 20px; /* Ajusta el tamaño aquí */
+}
+
+.input-wrapper textarea {
+    resize: none; /* Evita el redimensionamiento del área de texto */
+    height: 100px; /* Altura fija */
+}
+
+.btn {
+    margin-top: 15px; /* Espaciado superior para el botón */
+}
+
+/* Footer */
+footer {
+    min-height: 50vh;
+    background-image: linear-gradient(to top, rgba(116, 143, 230, 0.5) 0%, rgba(116, 143, 230, 0.5) 100%);
+    padding-bottom: 0.1px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us {
+    width: 40%;
+    color: rgb(31, 33, 138)
+}
+
+.brand {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(31, 33, 138);
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(31, 33, 138);
+}
+
+.social-media-icon:hover {
+    background: #fff;
+    color: #6e91f0;
+}
+
+.social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: rgb(31, 33, 138);
+    margin-bottom: 60px;
+}
+/* Menú burbuja flotante */
+/* Menú burbuja flotante */
+.menu-burbuja {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro y menos opaco */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interior */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    backdrop-filter: blur(5px); /* Desenfoque sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+.menu-burbuja ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-burbuja ul li {
+    margin: 8px 0; /* Márgenes para separar los enlaces */
+}
+
+.menu-burbuja ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    padding: 8px 12px; /* Espaciado en los enlaces */
+    border-radius: 20px; /* Bordes redondeados en enlaces */
+    font-size: 14px; /* Tamaño de fuente más grande */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto de transición */
+    display: flex; /* Flexbox para centrar los iconos */
+    align-items: center; /* Centrar verticalmente el contenido */
+}
+
+.menu-burbuja ul li a i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.menu-burbuja ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil en hover */
+    color: #ffcc00; /* Cambio de color de texto en hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu-burbuja {
+        right: 10px;
+        width: 100px; /* Ancho más angosto en pantallas pequeñas */
+        padding: 8px; /* Ajustar el padding */
+    }
+
+    .menu-burbuja ul li a {
+        font-size: 12px; /* Tamaño de fuente más pequeño */
+        padding: 6px 10px; /* Ajustar espaciado de enlaces */
+    }
+}
+
+/* Barra de Sugerencias */
+.suggestion-bar {
+    position: fixed; /* Hace que la barra quede fija */
+    top: 50%;        /* Posiciona la barra a la mitad de la pantalla */
+    left: 20px;      /* Ajusta la distancia desde la parte izquierda */
+    transform: translateY(-50%); /* Centra la barra verticalmente */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle estilo */
+    border-radius: 5px;
+    border: 1px solid rgb(31, 33, 138); /* Bordes de la barra */
+}
+
+.suggestion-bar input {
+    padding: 10px; /* Aumentar el padding para mayor comodidad */
+    font-size: 16px;
+    border: 1px solid rgb(31, 33, 138); /* Bordes del input */
+    border-radius: 3px;
+    width: 250px; /* Aumentar el ancho del input */
+    height: 40px; /* Aumentar la altura del input si es necesario */
+}
+
+.suggestion-bar button {
+    padding: 5px 10px;
+    background-color: rgb(31, 33, 138); /* Color azul */
+    color: white;
+    border: 1px solid rgb(31, 33, 138); /* Bordes del botón */
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.suggestion-bar button:hover {
+    background-color: #15166b; /* Un color más oscuro al pasar el mouse */
+}
+/* Estilo mensja exito sigerencia */
+.alert-success {
+        background-color: rgb(31, 33, 138); /* Cambia el color aquí */
+        color: white; /* Cambia el color del texto si es necesario */
+        padding: 10px; /* Opcional: añade un poco de padding */
+        border-radius: 5px; /* Opcional: añade bordes redondeados */
+    }
