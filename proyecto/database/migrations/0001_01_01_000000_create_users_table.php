@@ -15,8 +15,6 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name'); #nombre
-            $table->text('image')->nullable(); #foto de perfil
-            $table->string('phone')->nullable(); #telefono
             $table->string('email')->unique(); #email
             $table->enum('role', ['admin', 'vendor', 'user'])->default('user'); #roles en la base de datos de usuarios con la matriz, default users
             $table->enum('status', ['active', 'inactive'])->default('active'); #estado de los usuarios a través de la matriz, default usuario active
